@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <title>SYSR</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Oswald";
+      }
+      .title {
+        height: 8vh;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5fafd;
+      }
+      .container {
+        min-height: 92vh;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .all-prs-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        box-shadow: 2px 7px 19px 6px rgba(219, 219, 219);
+      }
+      .process-container {
+        width: 100%;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+        border-bottom-width: 1px;
+        height: 6vh;
+        background-color: #f5fafd;
+
+        display: flex;
+      }
+      .process-name {
+        flex: 2;
+      }
+      .process-name-head {
+        flex: 2;
+      }
+      .process-state {
+        flex: 2;
+      }
+
+      .process-state-head {
+        flex: 2;
+      }
+      .process-sn {
+        flex: 1;
+      }
+
+      .process-sn-head {
+        flex: 1;
+      }
+      .process-delay {
+        flex: 3;
+      }
+
+      .process-delay-head {
+        flex: 3;
+      }
+      .info {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .process-delay-item {
+        background-color: #f0f3f7;
+        opacity: 0.8;
+        text-align: center;
+        width: 20px;
+        padding: 4px;
+        margin: 4px;
+        border-radius: 50%;
+      }
+      .delayed {
+        opacity: 1;
+        background-color: #f50057;
+        color: white;
+      }
+      .active {
+        background-color: #63ffbb;
+      }
+      .process-container-head {
+        height: 8vh;
+        background-color: #474d5d;
+        color: white;
+        width: 100%;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+        border-bottom-width: 1px;
+        height: 6vh;
+
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">Distributed Systems</div>
+    <div class="container">
+      <div class="all-prs-container">
+        <div class="process-container-head">
+          <div class="process-name-head info">Process Number</div>
+          <div class="process-state-head info">Process State</div>
+          <div class="process-sn-head info">Logical Clock</div>
+          <div class="process-delay-head info">Delay</div>
+        </div>
+        <div class="process-container">
+          <div class="process-name info">Process 0</div>
+          <div class="process-state info">Delayed</div>
+          <div class="process-sn info">2</div>
+          <div class="process-delay info">
+            <div class="process-delay-item">0</div>
+            <div class="process-delay-item delayed">1</div>
+            <div class="process-delay-item">2</div>
+            <div class="process-delay-item">3</div>
+            <div class="process-delay-item">4</div>
+            <div class="process-delay-item delayed">5</div>
+            <div class="process-delay-item delayed">6</div>
+            <div class="process-delay-item">7</div>
+            <div class="process-delay-item">8</div>
+            <div class="process-delay-item">9</div>
+          </div>
+        </div>
+        <div class="process-container">
+          <div class="process-name info">Process 1</div>
+          <div class="process-state info">Delayed</div>
+          <div class="process-sn info">2</div>
+          <div class="process-delay info">
+            <div class="process-delay-item delayed">0</div>
+            <div class="process-delay-item">1</div>
+            <div class="process-delay-item">2</div>
+            <div class="process-delay-item">3</div>
+            <div class="process-delay-item">4</div>
+            <div class="process-delay-item">5</div>
+            <div class="process-delay-item">6</div>
+            <div class="process-delay-item delayed">7</div>
+            <div class="process-delay-item">8</div>
+            <div class="process-delay-item">9</div>
+          </div>
+        </div>
+        <div class="process-container">
+          <div class="process-name info">Process 2</div>
+          <div class="process-state info">Delayed</div>
+          <div class="process-sn info">2</div>
+          <div class="process-delay info">
+            <div class="process-delay-item">0</div>
+            <div class="process-delay-item">1</div>
+            <div class="process-delay-item">2</div>
+            <div class="process-delay-item">3</div>
+            <div class="process-delay-item">4</div>
+            <div class="process-delay-item delayed">5</div>
+            <div class="process-delay-item">6</div>
+            <div class="process-delay-item">7</div>
+            <div class="process-delay-item">8</div>
+            <div class="process-delay-item">9</div>
+          </div>
+        </div>
+        <div class="process-container">
+          <div class="process-name info">Process 3</div>
+          <div class="process-state info">Delayed</div>
+          <div class="process-sn info">2</div>
+          <div class="process-delay info">
+            <div class="process-delay-item delayed">0</div>
+            <div class="process-delay-item delayed">1</div>
+            <div class="process-delay-item">2</div>
+            <div class="process-delay-item delayed">3</div>
+            <div class="process-delay-item">4</div>
+            <div class="process-delay-item delayed">5</div>
+            <div class="process-delay-item delayed">6</div>
+            <div class="process-delay-item delayed">7</div>
+            <div class="process-delay-item">8</div>
+            <div class="process-delay-item">9</div>
+          </div>
+        </div>
+        <div class="process-container active">
+          <div class="process-name info">Process 4</div>
+          <div class="process-state info">Active</div>
+          <div class="process-sn info">2</div>
+          <div class="process-delay info">
+            <div class="process-delay-item">0</div>
+            <div class="process-delay-item">1</div>
+            <div class="process-delay-item">2</div>
+            <div class="process-delay-item">3</div>
+            <div class="process-delay-item">4</div>
+            <div class="process-delay-item">5</div>
+            <div class="process-delay-item">6</div>
+            <div class="process-delay-item">7</div>
+            <div class="process-delay-item">8</div>
+            <div class="process-delay-item">9</div>
+          </div>
+        </div>
+        <div class="process-container">
+          <div class="process-name info">Process 5</div>
+          <div class="process-state info">Delayed</div>
+          <div class="process-sn info">2</div>
+          <div class="process-delay info">
+            <div class="process-delay-item">0</div>
+            <div class="process-delay-item">1</div>
+            <div class="process-delay-item">2</div>
+            <div class="process-delay-item delayed">3</div>
+            <div class="process-delay-item">4</div>
+            <div class="process-delay-item">5</div>
+            <div class="process-delay-item">6</div>
+            <div class="process-delay-item">7</div>
+            <div class="process-delay-item">8</div>
+            <div class="process-delay-item delayed">9</div>
+          </div>
+        </div>
+        <div class="process-container">
+          <div class="process-name info">Process 6</div>
+          <div class="process-state info">Delayed</div>
+          <div class="process-sn info">2</div>
+          <div class="process-delay info">
+            <div class="process-delay-item">0</div>
+            <div class="process-delay-item">1</div>
+            <div class="process-delay-item">2</div>
+            <div class="process-delay-item">3</div>
+            <div class="process-delay-item">4</div>
+            <div class="process-delay-item">5</div>
+            <div class="process-delay-item">6</div>
+            <div class="process-delay-item">7</div>
+            <div class="process-delay-item">8</div>
+            <div class="process-delay-item">9</div>
+          </div>
+        </div>
+        <div class="process-container">
+          <div class="process-name info">Process 7</div>
+          <div class="process-state info">Delayed</div>
+          <div class="process-sn info">2</div>
+          <div class="process-delay info">
+            <div class="process-delay-item">0</div>
+            <div class="process-delay-item">1</div>
+            <div class="process-delay-item">2</div>
+            <div class="process-delay-item">3</div>
+            <div class="process-delay-item">4</div>
+            <div class="process-delay-item">5</div>
+            <div class="process-delay-item">6</div>
+            <div class="process-delay-item">7</div>
+            <div class="process-delay-item">8</div>
+            <div class="process-delay-item">9</div>
+          </div>
+        </div>
+        <div class="process-container">
+          <div class="process-name info">Process 8</div>
+          <div class="process-state info">Delayed</div>
+          <div class="process-sn info">2</div>
+          <div class="process-delay info">
+            <div class="process-delay-item">0</div>
+            <div class="process-delay-item">1</div>
+            <div class="process-delay-item">2</div>
+            <div class="process-delay-item">3</div>
+            <div class="process-delay-item">4</div>
+            <div class="process-delay-item">5</div>
+            <div class="process-delay-item">6</div>
+            <div class="process-delay-item">7</div>
+            <div class="process-delay-item">8</div>
+            <div class="process-delay-item">9</div>
+          </div>
+        </div>
+        <div class="process-container">
+          <div class="process-name info">Process 9</div>
+          <div class="process-state info">Delayed</div>
+          <div class="process-sn info">2</div>
+          <div class="process-delay info">
+            <div class="process-delay-item">0</div>
+            <div class="process-delay-item">1</div>
+            <div class="process-delay-item">2</div>
+            <div class="process-delay-item">3</div>
+            <div class="process-delay-item">4</div>
+            <div class="process-delay-item">5</div>
+            <div class="process-delay-item">6</div>
+            <div class="process-delay-item">7</div>
+            <div class="process-delay-item">8</div>
+            <div class="process-delay-item">9</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const process = document.querySelectorAll(".process-container");
+      const processState = document.querySelectorAll(".process-state");
+      const processSn = document.querySelectorAll(".process-sn");
+      const processDelay = document.querySelectorAll(".process-delay");
+
+      const socket = io();
+      socket.emit("logedIn");
+
+      //UPDATING DISPLAY
+      socket.on("processUpdate", (req) => {
+        const { id, inside, sn } = req;
+        delayed = parseInt(req.delayed).toString(2);
+        const missing = 10 - delayed.length;
+        for (let i = 0; i < missing; i++) {
+          delayed = "0" + delayed;
+        }
+        const delayedArray = delayed.split("");
+
+        //UPDATING THE FRONT
+        //UPDATING STATE
+        processState[id].innerHTML = inside ? "Active" : "Delayed";
+        //UPDATING ACTIVE PROCESS
+        if (inside) {
+          for (let i = 0; i < process.length; i++) {
+            process[i].setAttribute("class", "process-container");
+          }
+          process[id].setAttribute("class", "process-container active");
+        }
+        //UPDATING LOGICAL CLOClK
+        processSn[id].innerHTML = sn;
+        //UPDATING DEALYS
+        const delaysForOneProcess = process[id].querySelectorAll(
+          ".process-delay-item"
+        );
+        for (let i = 0; i < delaysForOneProcess.length; i++) {
+          if (delayedArray[i] === "0")
+            delaysForOneProcess[i].setAttribute("class", "process-delay-item");
+          else
+            delaysForOneProcess[i].setAttribute(
+              "class",
+              "process-delay-item delayed"
+            );
+        }
+      });
+    </script>
+  </body>
+</html>
